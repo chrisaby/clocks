@@ -18,11 +18,11 @@ const Home = () => {
 ReactDOM.render(
         <Router>
         <div>
-          <span className="head">
-                <h4><Link to="/">Home</Link></h4>
-                <h4><Link to={"/about/"+"chris"}>About</Link></h4>
-                <h4><Link to="/topics">Contact</Link></h4>
-          </span>
+          <div className="head">
+                <h4 id="about"><Link to={"/about/"+"chris"}>About</Link></h4>
+                <h4 id="home"><Link to="/">Home</Link></h4>
+                <h4 id="contact"><Link to="/topics">Contact</Link></h4>
+          </div>
           <Route exact path="/" component={App} />
           <Route path="/about/:label?" component={About} />
           <Route path="/topics" component={Contact} />

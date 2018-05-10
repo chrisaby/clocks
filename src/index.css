@@ -1,16 +1,41 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: aquamarine;
+  background-color: yellow;
   font-family: sans-serif;
 }
+.head{
+  background:blueviolet;
+  /* opacity:0.5; */
+  margin-top: 3%;
+  padding:2%;
+}
+
+a{
+text-decoration: none;    
+}
 .head h4{
-  text-align: center;
+  display:inline;
   background-color: white;
-  width: 100px;
-  margin-left:50%;
-  transform:translateX(-50%);
+  padding:10px;
   border-radius:20px;
   text-shadow: 5px;
-  
+  box-shadow: -3px 3px red;
+}
+.head h4:hover{
+  background:lightgrey;
+  transform: translateX(3px);
+}
+.head h4:active{
+  box-shadow: none;
+}
+#about{
+  margin-left: 20%;
+}
+#contact{
+
+}
+#home{
+  margin-right:20%;
+  margin-left:20%;
 }

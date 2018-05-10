@@ -2,25 +2,25 @@
   position: absolute;
   text-align: center;
 
-  top:50%;
+  top:55%;
   left:50%;
   padding-top: 5%;
   transform:translate(-50%,-50%);
    
   height:50%;
   width: 30%; 
-  
+  color:white;
   border-radius: 50%;
   border-width: 5px;
   border-style: solid;
-  border-color: blue;
-
-  background-color:white;
+  border-color: green;
+  background-color:black;
+  box-shadow: -15px 03px darkgreen;
 }
 
 .App span{
   font-size: 35px;
-  /* font-family:'digital-clock-font'; */
+
   padding:0px 15px 0px 15px;
   border-radius:25px;
   background-color: lightgreen;

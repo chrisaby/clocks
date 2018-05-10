@@ -6,8 +6,9 @@ class App extends Component
 {
   constructor(props){
     super(props);
-    this.state={date: new Date()};
+    this.state={date: new Date(),flag:"GREEN"};
     this.tick = this.tick.bind(this);
+    this.changeFlag=this.changeFlag.bind(this);
   }
   componentDidMount(){
     // this.timer = setInterval(()=>this.tick(),1000);
@@ -21,11 +22,16 @@ class App extends Component
     // console.log("hi",this);
     this.setState({date: new Date()})
   }
+  changeFlag(e,flag){
+    // this.setState({flag:flag});
+  }
   render()
   {
+
     return (
-      <div className="App">
-            {moment().format('LTS')}<br/>The Time is <br/><span>{this.state.date.toLocaleTimeString()}</span>           
+      <div className="App" onClick={(e) => this.changeFlag(e,"RED")}>
+            {moment().format('LTS')}<br/><p>The Time is</p> <br/>
+            <span>{this.state.date.toLocaleTimeString()}</span>           
       </div>
     );
   }
