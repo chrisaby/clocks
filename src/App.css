@@ -1,27 +1,28 @@
 .App{
   position: absolute;
   text-align: center;
-
+  
   top:55%;
   left:50%;
-  padding-top: 5%;
   transform:translate(-50%,-50%);
+  
+  /* padding-top:100px; */
    
   height:50%;
   width: 30%; 
   color:white;
-  border-radius: 50%;
-  border-width: 5px;
-  border-style: solid;
-  border-color: green;
+  border: 5px solid green;
+  border-radius:50%;
   background-color:black;
   box-shadow: -15px 03px darkgreen;
 }
 
 .App span{
-  font-size: 35px;
-
-  padding:0px 15px 0px 15px;
+  position: absolute;
+  margin-top:30%;
+  transform: translateX(-50%);
+  font-size: 30px;
   border-radius:25px;
-  background-color: lightgreen;
+  padding:10px;
+  /* background-color: lightgreen; */
 }

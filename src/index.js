@@ -19,12 +19,12 @@ ReactDOM.render(
         <Router>
         <div>
           <div className="head">
-                <h4 id="about"><Link to={"/about/"+"chris"}>About</Link></h4>
-                <h4 id="home"><Link to="/">Home</Link></h4>
-                <h4 id="contact"><Link to="/topics">Contact</Link></h4>
+                <Link id="about" to={"/about"}>About</Link>
+                <Link id="home" to="/">Home</Link>
+                <Link id="contact" to="/contact/Chris">Contact</Link>
           </div>
           <Route exact path="/" component={App} />
-          <Route path="/about/:label?" component={About} />
-          <Route path="/topics" component={Contact} />
+          <Route path="/about" component={About} />
+          <Route path="/contact/:name?" component={Contact} />
         </div>          
         </Router>   , document.getElementById('root'));

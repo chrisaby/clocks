@@ -6,7 +6,7 @@ class App extends Component
 {
   constructor(props){
     super(props);
-    this.state={date: new Date(),flag:"GREEN"};
+    this.state={date: moment().format('LTS'),flag:"LIGHTGREEN"};
     this.tick = this.tick.bind(this);
     this.changeFlag=this.changeFlag.bind(this);
   }
@@ -20,18 +20,26 @@ class App extends Component
   }
   tick(){
     // console.log("hi",this);
-    this.setState({date: new Date()})
+    this.setState({date: moment().format('LTS')})
   }
   changeFlag(e,flag){
-    // this.setState({flag:flag});
+    this.setState({flag:this.getRandomColor()});
   }
+  getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  
   render()
   {
 
     return (
-      <div className="App" onClick={(e) => this.changeFlag(e,"RED")}>
-            {moment().format('LTS')}<br/><p>The Time is</p> <br/>
-            <span>{this.state.date.toLocaleTimeString()}</span>           
+      <div className="App"  onClick={this.changeFlag}>
+            <span style={{backgroundColor:this.state.flag}}>{this.state.date}</span>           
       </div>
     );
   }

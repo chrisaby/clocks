@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  background-color: lightseagreen;
   font-family: sans-serif;
 }
 .head{
@@ -14,19 +14,19 @@ body {
 a{
 text-decoration: none;    
 }
-.head h4{
+.head a{
   display:inline;
   background-color: white;
   padding:10px;
   border-radius:20px;
   text-shadow: 5px;
-  box-shadow: -3px 3px red;
+  box-shadow: -3px 3px 5px red;
 }
-.head h4:hover{
-  background:lightgrey;
+.head a:hover{
   transform: translateX(3px);
 }
-.head h4:active{
+.head a:active{
+  background:lightgrey;
   box-shadow: none;
 }
 #about{
